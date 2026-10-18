@@ -1,12 +1,4 @@
 
-/*
-Name: Isaac Owusu
-Course: CSC 6370 Web Programming
-Project: African Recipe Studio
-*/
-
-/* General page styling */
-
 * {
     box-sizing: border-box;
 }
@@ -47,7 +39,9 @@ img {
 }
 
 
-/* Header and navigation */
+/* =====================================
+   Header and Navigation
+   ===================================== */
 
 header {
     background-color: #2d6146;
@@ -73,10 +67,17 @@ nav a {
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f0c674;
 }
 
 
-/* Main page layout */
+/* =====================================
+   Main Page Layout
+   ===================================== */
 
 main {
     max-width: 1200px;
@@ -89,13 +90,16 @@ section {
 }
 
 
-/* Homepage hero section */
+/* =====================================
+   Homepage Hero Section
+   ===================================== */
 
 .hero {
     background-color: #e7eee5;
     padding: 60px 40px;
     border-radius: 12px;
     text-align: center;
+    animation: fadeIn 0.8s ease-out;
 }
 
 .hero h2 {
@@ -119,7 +123,9 @@ section {
 }
 
 
-/* Introduction section */
+/* =====================================
+   Introduction Section
+   ===================================== */
 
 .introduction {
     max-width: 900px;
@@ -128,7 +134,9 @@ section {
 }
 
 
-/* Featured recipes and recipe collection */
+/* =====================================
+   Recipe Cards and Collection
+   ===================================== */
 
 .featured-recipes {
     margin-top: 50px;
@@ -150,6 +158,13 @@ section {
     border: 1px solid #e4e5db;
     border-radius: 10px;
     padding: 15px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .recipe-card img {
@@ -157,6 +172,11 @@ section {
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover img {
+    transform: scale(1.03);
 }
 
 .recipe-card h3 {
@@ -180,7 +200,30 @@ section {
 }
 
 
-/* Recipe categories */
+/* =====================================
+   Button Hover Effects
+   ===================================== */
+
+.hero a,
+.recipe-card a,
+.recipe-detail > a,
+.suggestion-result a {
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.hero a:hover,
+.recipe-card a:hover,
+.recipe-detail > a:hover,
+.suggestion-result a:hover {
+    background-color: #204832;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   Recipe Categories
+   ===================================== */
 
 .categories {
     margin-top: 60px;
@@ -198,6 +241,13 @@ section {
     padding: 25px;
     border-radius: 10px;
     text-align: center;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.category-card:hover {
+    background-color: #d6e4d3;
+    transform: translateY(-4px);
 }
 
 .category-card h3 {
@@ -205,7 +255,9 @@ section {
 }
 
 
-/* Recipes page introduction */
+/* =====================================
+   Recipes Page Introduction
+   ===================================== */
 
 .page-intro {
     background-color: #e7eee5;
@@ -224,7 +276,9 @@ section {
 }
 
 
-/* Individual recipe pages */
+/* =====================================
+   Individual Recipe Pages
+   ===================================== */
 
 .recipe-detail {
     background-color: white;
@@ -272,7 +326,9 @@ section {
 }
 
 
-/* Cooking instructions */
+/* =====================================
+   Cooking Instructions
+   ===================================== */
 
 .cooking-steps {
     margin-top: 40px;
@@ -297,7 +353,9 @@ section {
 }
 
 
-/* About page */
+/* =====================================
+   About Page
+   ===================================== */
 
 .about-content {
     background-color: white;
@@ -311,7 +369,9 @@ section {
 }
 
 
-/* Team page */
+/* =====================================
+   Team Page
+   ===================================== */
 
 .team-content {
     background-color: white;
@@ -333,7 +393,9 @@ section {
 }
 
 
-/* Footer */
+/* =====================================
+   Footer
+   ===================================== */
 
 footer {
     background-color: #26382d;
@@ -349,11 +411,174 @@ footer p {
 
 
 /* =====================================
-   Responsive Design
+   Homepage Animation
    ===================================== */
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
 
-/* Tablet screens */
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================
+   CSS-only Recipe Suggestion
+   ===================================== */
+
+.recipe-suggestion {
+    background-color: #e7eee5;
+    padding: 35px;
+    border-radius: 12px;
+    margin-top: 50px;
+}
+
+.suggestion-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e4e5db;
+}
+
+.suggestion-box > input,
+.recipe-finder > input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.suggestion-options {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.suggestion-options label {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #e7eee5;
+    border: 1px solid #c5d4c3;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.suggestion-options label:hover {
+    background-color: #d6e4d3;
+}
+
+#suggest-easy:checked ~ .suggestion-options label[for="suggest-easy"],
+#suggest-rice:checked ~ .suggestion-options label[for="suggest-rice"],
+#suggest-soup:checked ~ .suggestion-options label[for="suggest-soup"] {
+    background-color: #2d6146;
+    color: white;
+}
+
+.suggestion-result {
+    display: none;
+    padding: 20px;
+    background-color: #faf7f1;
+    border-radius: 8px;
+}
+
+#suggest-easy:checked ~ .suggestion-results .easy-result {
+    display: block;
+}
+
+#suggest-rice:checked ~ .suggestion-results .rice-result {
+    display: block;
+}
+
+#suggest-soup:checked ~ .suggestion-results .soup-result {
+    display: block;
+}
+
+.suggestion-result a {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #2d6146;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+/* =====================================
+   CSS-only Recipe Finder
+   ===================================== */
+
+.recipe-finder {
+    margin-top: 25px;
+}
+
+.filter-options {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.filter-options label {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #e7eee5;
+    border: 1px solid #c5d4c3;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-options label:hover {
+    background-color: #d6e4d3;
+}
+
+#filter-all:checked ~ .filter-options label[for="filter-all"],
+#filter-rice:checked ~ .filter-options label[for="filter-rice"],
+#filter-soup:checked ~ .filter-options label[for="filter-soup"],
+#filter-side:checked ~ .filter-options label[for="filter-side"] {
+    background-color: #2d6146;
+    color: white;
+}
+
+#filter-rice:checked ~ .recipe-grid .recipe-card:not(.rice) {
+    display: none;
+}
+
+#filter-soup:checked ~ .recipe-grid .recipe-card:not(.soup) {
+    display: none;
+}
+
+#filter-side:checked ~ .recipe-grid .recipe-card:not(.side) {
+    display: none;
+}
+
+
+/* =====================================
+   Keyboard Focus
+   ===================================== */
+
+a:focus-visible {
+    outline: 3px solid #b66b32;
+    outline-offset: 3px;
+}
+
+.suggestion-box > input:focus-visible ~ .suggestion-options,
+.recipe-finder > input:focus-visible ~ .filter-options {
+    outline: 2px solid #b66b32;
+    outline-offset: 4px;
+}
+
+
+/* =====================================
+   Responsive Design - Tablet
+   ===================================== */
 
 @media screen and (max-width: 900px) {
 
@@ -407,7 +632,9 @@ footer p {
 }
 
 
-/* Mobile screens */
+/* =====================================
+   Responsive Design - Mobile
+   ===================================== */
 
 @media screen and (max-width: 600px) {
 
@@ -447,8 +674,6 @@ footer p {
         font-size: 20px;
     }
 
-    /* Homepage hero */
-
     .hero {
         padding: 35px 20px;
     }
@@ -465,14 +690,10 @@ footer p {
         padding: 10px 20px;
     }
 
-    /* Introduction */
-
     .introduction {
         margin: 35px auto;
         text-align: left;
     }
-
-    /* Recipe cards */
 
     .recipe-grid {
         grid-template-columns: 1fr;
@@ -495,8 +716,6 @@ footer p {
         padding: 10px 15px;
     }
 
-    /* Recipe categories */
-
     .category-grid {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -506,8 +725,6 @@ footer p {
         padding: 20px;
     }
 
-    /* Recipes page */
-
     .page-intro {
         padding: 30px 20px;
     }
@@ -515,8 +732,6 @@ footer p {
     .page-intro h2 {
         font-size: 26px;
     }
-
-    /* Individual recipe pages */
 
     .recipe-detail {
         padding: 20px 15px;
@@ -540,8 +755,6 @@ footer p {
         padding-left: 20px;
     }
 
-    /* Cooking steps */
-
     .step {
         padding: 15px;
         margin-bottom: 15px;
@@ -551,14 +764,33 @@ footer p {
         font-size: 17px;
     }
 
-    /* About and Team pages */
-
     .about-content,
     .team-content {
         padding: 20px 15px;
     }
 
-    /* Footer */
+    .recipe-suggestion {
+        padding: 20px 15px;
+    }
+
+    .suggestion-box {
+        padding: 15px;
+    }
+
+    .suggestion-options,
+    .filter-options {
+        gap: 10px;
+    }
+
+    .suggestion-options label,
+    .filter-options label {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .suggestion-result {
+        padding: 15px;
+    }
 
     footer {
         padding: 20px 15px;
@@ -568,7 +800,9 @@ footer p {
 }
 
 
-/* Extra small phone screens */
+/* =====================================
+   Extra Small Phone Screens
+   ===================================== */
 
 @media screen and (max-width: 380px) {
 
@@ -595,5 +829,37 @@ footer p {
     .recipe-detail > img {
         height: 190px;
     }
+}
 
+
+/* =====================================
+   Reduced Motion
+   ===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero {
+        animation: none;
+    }
+
+    .recipe-card,
+    .recipe-card img,
+    .category-card,
+    nav a,
+    .hero a,
+    .recipe-card a,
+    .recipe-detail > a,
+    .suggestion-result a {
+        transition: none;
+    }
+
+    .recipe-card:hover,
+    .recipe-card:hover img,
+    .category-card:hover,
+    .hero a:hover,
+    .recipe-card a:hover,
+    .recipe-detail > a:hover,
+    .suggestion-result a:hover {
+        transform: none;
+    }
 }

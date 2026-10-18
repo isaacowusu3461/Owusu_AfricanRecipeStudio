@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipes | African Recipe Studio</title>
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 
@@ -23,116 +22,170 @@
 
     <main>
 
+        <!-- Page introduction -->
         <section class="page-intro">
             <h2>Our African Recipe Collection</h2>
+
             <p>
-                Explore traditional dishes from different African
-                countries. Each recipe includes ingredients,
-                cooking instructions, and a little background
-                about the dish.
+                Explore traditional dishes from different
+                African countries. Each recipe includes
+                ingredients, cooking instructions, and a
+                little background about the dish.
             </p>
         </section>
 
+        <!-- Recipe collection -->
         <section class="recipe-collection">
             <h2>Browse Recipes</h2>
 
-            <div class="recipe-grid">
+            <p>
+                Select a category to find recipes
+                that match your preference.
+            </p>
 
-                <article class="recipe-card">
-                    <img src="images/jollof.jpg"
-                         alt="Ghanaian Jollof Rice">
+            <div class="recipe-finder">
 
-                    <h3>Ghanaian Jollof Rice</h3>
-                    <p>
-                        Rice cooked in a rich tomato sauce
-                        with onions, peppers, and spices.
-                    </p>
-                    <p>Country: Ghana</p>
-                    <p>Cooking Time: 60 minutes</p>
-                    <p>Difficulty: Medium</p>
+                <input type="radio"
+                       id="filter-all"
+                       name="recipe-filter"
+                       checked>
 
-                    <a href="recipes/jollof.html">View Recipe</a>
-                </article>
+                <input type="radio"
+                       id="filter-rice"
+                       name="recipe-filter">
 
-                <article class="recipe-card">
-                    <img src="images/waakye.jpg"
-                         alt="Ghanaian Waakye">
+                <input type="radio"
+                       id="filter-soup"
+                       name="recipe-filter">
 
-                    <h3>Waakye</h3>
-                    <p>
-                        A popular Ghanaian meal made by
-                        cooking rice and beans together.
-                    </p>
-                    <p>Country: Ghana</p>
-                    <p>Cooking Time: 90 minutes</p>
-                    <p>Difficulty: Medium</p>
+                <input type="radio"
+                       id="filter-side"
+                       name="recipe-filter">
 
-                    <a href="recipes/waakye.html">View Recipe</a>
-                </article>
+                <div class="filter-options">
+                    <label for="filter-all">All Recipes</label>
+                    <label for="filter-rice">Rice Dishes</label>
+                    <label for="filter-soup">Soups and Stews</label>
+                    <label for="filter-side">Breads and Sides</label>
+                </div>
 
-                <article class="recipe-card">
-                    <img src="images/egusi.jpg"
-                         alt="Nigerian Egusi Soup">
+                <div class="recipe-grid">
 
-                    <h3>Egusi Soup</h3>
-                    <p>
-                        A thick Nigerian soup prepared with
-                        ground melon seeds and vegetables.
-                    </p>
-                    <p>Country: Nigeria</p>
-                    <p>Cooking Time: 55 minutes</p>
-                    <p>Difficulty: Medium</p>
+                    <!-- Jollof Rice -->
+                    <article class="recipe-card rice">
+                        <img src="images/jollof.jpg"
+                             alt="Ghanaian Jollof Rice">
 
-                    <a href="recipes/egusi.html">View Recipe</a>
-                </article>
+                        <h3>Ghanaian Jollof Rice</h3>
 
-                <article class="recipe-card">
-                    <img src="images/chapati.jpg"
-                         alt="East African Chapati">
+                        <p>
+                            Rice cooked in a rich tomato sauce
+                            with onions, peppers, and spices.
+                        </p>
 
-                    <h3>East African Chapati</h3>
-                    <p>
-                        A soft flatbread commonly served
-                        with stews and other meals.
-                    </p>
-                    <p>Region: East Africa</p>
-                    <p>Cooking Time: 45 minutes</p>
-                    <p>Difficulty: Easy</p>
+                        <p>Country: Ghana</p>
+                        <p>Cooking Time: 60 minutes</p>
+                        <p>Difficulty: Medium</p>
 
-                    <a href="recipes/chapati.html">View Recipe</a>
-                </article>
+                        <a href="recipes/jollof.html">View Recipe</a>
+                    </article>
 
-                <article class="recipe-card">
-                    <img src="images/yassa.jpg"
-                         alt="Senegalese Chicken Yassa">
+                    <!-- Waakye -->
+                    <article class="recipe-card rice">
+                        <img src="images/waakye.jpg"
+                             alt="Ghanaian Waakye">
 
-                    <h3>Chicken Yassa</h3>
-                    <p>
-                        A Senegalese chicken dish prepared
-                        with onions, lemon, and mustard.
-                    </p>
-                    <p>Country: Senegal</p>
-                    <p>Cooking Time: 75 minutes</p>
-                    <p>Difficulty: Medium</p>
+                        <h3>Waakye</h3>
 
-                    <a href="recipes/yassa.html">View Recipe</a>
-                </article>
+                        <p>
+                            A popular Ghanaian meal made by
+                            cooking rice and beans together.
+                        </p>
 
-                <article class="recipe-card">
-                    <img src="images/chakalaka.jpg"
-                         alt="South African Chakalaka">
+                        <p>Country: Ghana</p>
+                        <p>Cooking Time: 90 minutes</p>
+                        <p>Difficulty: Medium</p>
 
-                    <h3>Chakalaka</h3>
-                    <p>
-                        A spicy South African vegetable
-                        relish often served as a side dish.
-                    </p>
-                    <p>Country: South Africa</p>
-                    <p>Cooking Time: 35 minutes</p>
-                    <p>Difficulty: Easy</p>
+                        <a href="recipes/waakye.html">View Recipe</a>
+                    </article>
 
-                    <a href="recipes/chakalaka.html">View Recipe</a>
-                </article>
+                    <!-- Egusi Soup -->
+                    <article class="recipe-card soup">
+                        <img src="images/egusi.jpg"
+                             alt="Nigerian Egusi Soup">
+
+                        <h3>Egusi Soup</h3>
+
+                        <p>
+                            A thick Nigerian soup prepared with
+                            ground melon seeds and vegetables.
+                        </p>
+
+                        <p>Country: Nigeria</p>
+                        <p>Cooking Time: 55 minutes</p>
+                        <p>Difficulty: Medium</p>
+
+                        <a href="recipes/egusi.html">View Recipe</a>
+                    </article>
+
+                    <!-- Chapati -->
+                    <article class="recipe-card side">
+                        <img src="images/chapati.jpg"
+                             alt="East African Chapati">
+
+                        <h3>East African Chapati</h3>
+
+                        <p>
+                            A soft flatbread commonly served
+                            with stews and other meals.
+                        </p>
+
+                        <p>Region: East Africa</p>
+                        <p>Cooking Time: 45 minutes</p>
+                        <p>Difficulty: Easy</p>
+
+                        <a href="recipes/chapati.html">View Recipe</a>
+                    </article>
+
+                    <!-- Chicken Yassa -->
+                    <article class="recipe-card soup">
+                        <img src="images/yassa.jpg"
+                             alt="Senegalese Chicken Yassa">
+
+                        <h3>Chicken Yassa</h3>
+
+                        <p>
+                            A Senegalese chicken dish prepared
+                            with onions, lemon, and mustard.
+                        </p>
+
+                        <p>Country: Senegal</p>
+                        <p>Cooking Time: 75 minutes</p>
+                        <p>Difficulty: Medium</p>
+
+                        <a href="recipes/yassa.html">View Recipe</a>
+                    </article>
+
+                    <!-- Chakalaka -->
+                    <article class="recipe-card side">
+                        <img src="images/chakalaka.jpg"
+                             alt="South African Chakalaka">
+
+                        <h3>Chakalaka</h3>
+
+                        <p>
+                            A spicy South African vegetable
+                            relish often served as a side dish.
+                        </p>
+
+                        <p>Country: South Africa</p>
+                        <p>Cooking Time: 35 minutes</p>
+                        <p>Difficulty: Easy</p>
+
+                        <a href="recipes/chakalaka.html">View Recipe</a>
+                    </article>
+
+                </div>
 
             </div>
         </section>

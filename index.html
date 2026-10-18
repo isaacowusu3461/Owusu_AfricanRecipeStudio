@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | African Recipe Studio</title>
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 
@@ -84,7 +83,7 @@
                     <p>Cooking Time: 60 minutes</p>
                     <p>Difficulty: Medium</p>
 
-                    <a href="recipes.html">View Recipes</a>
+                    <a href="recipes/jollof.html">View Recipe</a>
                 </article>
 
                 <article class="recipe-card">
@@ -102,7 +101,7 @@
                     <p>Cooking Time: 90 minutes</p>
                     <p>Difficulty: Medium</p>
 
-                    <a href="recipes.html">View Recipes</a>
+                    <a href="recipes/waakye.html">View Recipe</a>
                 </article>
 
                 <article class="recipe-card">
@@ -120,7 +119,7 @@
                     <p>Cooking Time: 55 minutes</p>
                     <p>Difficulty: Medium</p>
 
-                    <a href="recipes.html">View Recipes</a>
+                    <a href="recipes/egusi.html">View Recipe</a>
                 </article>
 
             </div>
@@ -159,6 +158,82 @@
                         and side dishes from Africa.
                     </p>
                 </article>
+
+            </div>
+        </section>
+
+        <!-- CSS-only recipe suggestion -->
+        <section class="recipe-suggestion">
+            <h2>Recipe Suggestion</h2>
+
+            <p>
+                Not sure what to cook? Choose what you are
+                looking for and get a recipe suggestion.
+            </p>
+
+            <div class="suggestion-box">
+
+                <input type="radio"
+                       id="suggest-easy"
+                       name="recipe-choice"
+                       checked>
+
+                <input type="radio"
+                       id="suggest-rice"
+                       name="recipe-choice">
+
+                <input type="radio"
+                       id="suggest-soup"
+                       name="recipe-choice">
+
+                <div class="suggestion-options">
+                    <label for="suggest-easy">Something Easy</label>
+                    <label for="suggest-rice">Rice Dish</label>
+                    <label for="suggest-soup">Soup or Stew</label>
+                </div>
+
+                <div class="suggestion-results">
+
+                    <div class="suggestion-result easy-result">
+                        <h3>Try East African Chapati</h3>
+
+                        <p>
+                            Chapati is a good option if you want
+                            something simple to prepare.
+                        </p>
+
+                        <a href="recipes/chapati.html">
+                            View Recipe
+                        </a>
+                    </div>
+
+                    <div class="suggestion-result rice-result">
+                        <h3>Try Ghanaian Jollof Rice</h3>
+
+                        <p>
+                            Jollof Rice is a flavorful choice
+                            if you enjoy rice dishes.
+                        </p>
+
+                        <a href="recipes/jollof.html">
+                            View Recipe
+                        </a>
+                    </div>
+
+                    <div class="suggestion-result soup-result">
+                        <h3>Try Nigerian Egusi Soup</h3>
+
+                        <p>
+                            Egusi Soup is a good option if you
+                            want a rich and filling soup.
+                        </p>
+
+                        <a href="recipes/egusi.html">
+                            View Recipe
+                        </a>
+                    </div>
+
+                </div>
 
             </div>
         </section>
