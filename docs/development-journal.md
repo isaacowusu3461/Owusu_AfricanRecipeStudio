@@ -17,7 +17,7 @@ I used Kanban to organize the development process and track the progress of diff
 
 The screenshot below shows the ClickUp Kanban board used to organize the project.
 
-![Kanban Board Overview](images/kanban-backlog.png)
+![Kanban Board Overview](../images/kanban-backlog.png)
 
 ### 2.2 Backlog
 
@@ -34,7 +34,7 @@ Some of the tasks included:
 
 These tasks were moved to the To Do column when I was ready to work on them.
 
-![Kanban Backlog](images/kanban-backlog.png)
+![Kanban Backlog](../images/kanban-backlog.png)
 
 ### 2.3 To Do
 
@@ -55,7 +55,7 @@ Some of the tasks included:
 
 I worked through these tasks during development and moved them to In Progress when I started implementing them.
 
-![Kanban To Do](images/kanban-todo.png)
+![Kanban To Do](../images/kanban-todo.png)
 
 ### 2.4 In Progress and Done
 
