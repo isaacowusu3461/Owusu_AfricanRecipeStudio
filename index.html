@@ -9,18 +9,22 @@
 </head>
 <body>
 
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
     <header>
         <h1>African Recipe Studio</h1>
 
         <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
+            <a href="index.html" aria-current="page">Home</a>
             <a href="recipes.html">Recipes</a>
             <a href="about.html">About</a>
             <a href="team.html">Team</a>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
 
         <!-- Welcome section -->
         <section class="hero">
@@ -70,7 +74,7 @@
 
                 <article class="recipe-card">
                     <img src="images/jollof.jpg"
-                         alt="Ghanaian Jollof Rice served on a plate">
+                         alt="A plate of Ghanaian Jollof Rice">
 
                     <h3>Ghanaian Jollof Rice</h3>
 
@@ -83,7 +87,7 @@
                     <p>Cooking Time: 60 minutes</p>
                     <p>Difficulty: Medium</p>
 
-                    <a href="recipes/jollof.html">View Recipe</a>
+                    <a href="recipes/jollof.html">View Jollof Recipe</a>
                 </article>
 
                 <article class="recipe-card">
@@ -101,12 +105,12 @@
                     <p>Cooking Time: 90 minutes</p>
                     <p>Difficulty: Medium</p>
 
-                    <a href="recipes/waakye.html">View Recipe</a>
+                    <a href="recipes/waakye.html">View Waakye Recipe</a>
                 </article>
 
                 <article class="recipe-card">
                     <img src="images/egusi.jpg"
-                         alt="Nigerian Egusi Soup served in a bowl">
+                         alt="A bowl of Nigerian Egusi Soup">
 
                     <h3>Egusi Soup</h3>
 
@@ -119,7 +123,7 @@
                     <p>Cooking Time: 55 minutes</p>
                     <p>Difficulty: Medium</p>
 
-                    <a href="recipes/egusi.html">View Recipe</a>
+                    <a href="recipes/egusi.html">View Egusi Recipe</a>
                 </article>
 
             </div>
@@ -171,26 +175,35 @@
                 looking for and get a recipe suggestion.
             </p>
 
+            <p class="feature-note">
+                This is a simulated recommendation feature
+                built with HTML and CSS.
+            </p>
+
             <div class="suggestion-box">
 
-                <input type="radio"
-                       id="suggest-easy"
-                       name="recipe-choice"
-                       checked>
+                <fieldset class="suggestion-options">
+                    <legend>Choose a cooking preference</legend>
 
-                <input type="radio"
-                       id="suggest-rice"
-                       name="recipe-choice">
+                    <input type="radio"
+                           id="suggest-easy"
+                           name="recipe-choice"
+                           checked>
 
-                <input type="radio"
-                       id="suggest-soup"
-                       name="recipe-choice">
-
-                <div class="suggestion-options">
                     <label for="suggest-easy">Something Easy</label>
+
+                    <input type="radio"
+                           id="suggest-rice"
+                           name="recipe-choice">
+
                     <label for="suggest-rice">Rice Dish</label>
+
+                    <input type="radio"
+                           id="suggest-soup"
+                           name="recipe-choice">
+
                     <label for="suggest-soup">Soup or Stew</label>
-                </div>
+                </fieldset>
 
                 <div class="suggestion-results">
 
@@ -203,7 +216,7 @@
                         </p>
 
                         <a href="recipes/chapati.html">
-                            View Recipe
+                            View Chapati Recipe
                         </a>
                     </div>
 
@@ -216,7 +229,7 @@
                         </p>
 
                         <a href="recipes/jollof.html">
-                            View Recipe
+                            View Jollof Recipe
                         </a>
                     </div>
 
@@ -229,7 +242,7 @@
                         </p>
 
                         <a href="recipes/egusi.html">
-                            View Recipe
+                            View Egusi Recipe
                         </a>
                     </div>
 
