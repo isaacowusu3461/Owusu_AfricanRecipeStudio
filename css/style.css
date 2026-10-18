@@ -346,3 +346,254 @@ footer {
 footer p {
     margin: 0;
 }
+
+
+/* =====================================
+   Responsive Design
+   ===================================== */
+
+
+/* Tablet screens */
+
+@media screen and (max-width: 900px) {
+
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    main {
+        padding: 25px 20px;
+    }
+
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .hero {
+        padding: 45px 30px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .recipe-detail {
+        padding: 25px;
+    }
+
+    .recipe-detail > img {
+        height: 300px;
+    }
+
+    .about-content,
+    .team-content {
+        padding: 25px;
+    }
+}
+
+
+/* Mobile screens */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    header {
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    section {
+        margin-bottom: 35px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    /* Homepage hero */
+
+    .hero {
+        padding: 35px 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero a {
+        padding: 10px 20px;
+    }
+
+    /* Introduction */
+
+    .introduction {
+        margin: 35px auto;
+        text-align: left;
+    }
+
+    /* Recipe cards */
+
+    .recipe-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .recipe-card {
+        padding: 15px;
+    }
+
+    .recipe-card img {
+        height: 220px;
+    }
+
+    .recipe-card h3 {
+        font-size: 20px;
+    }
+
+    .recipe-card a {
+        padding: 10px 15px;
+    }
+
+    /* Recipe categories */
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .category-card {
+        padding: 20px;
+    }
+
+    /* Recipes page */
+
+    .page-intro {
+        padding: 30px 20px;
+    }
+
+    .page-intro h2 {
+        font-size: 26px;
+    }
+
+    /* Individual recipe pages */
+
+    .recipe-detail {
+        padding: 20px 15px;
+        margin: 10px auto;
+    }
+
+    .recipe-detail h2 {
+        font-size: 28px;
+    }
+
+    .recipe-detail > img {
+        height: 220px;
+    }
+
+    .recipe-detail section {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .recipe-detail ul {
+        padding-left: 20px;
+    }
+
+    /* Cooking steps */
+
+    .step {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .step h4 {
+        font-size: 17px;
+    }
+
+    /* About and Team pages */
+
+    .about-content,
+    .team-content {
+        padding: 20px 15px;
+    }
+
+    /* Footer */
+
+    footer {
+        padding: 20px 15px;
+        font-size: 14px;
+        margin-top: 30px;
+    }
+}
+
+
+/* Extra small phone screens */
+
+@media screen and (max-width: 380px) {
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .recipe-card img {
+        height: 180px;
+    }
+
+    .recipe-detail > img {
+        height: 190px;
+    }
+
+}
